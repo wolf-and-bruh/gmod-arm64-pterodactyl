@@ -5,10 +5,10 @@ Pterodactyl Egg specialized for running **Garry's Mod on ARM64 architecture** (s
 
 ---
 
-## 📦 Egg description
+## 🥚 Egg description
 
 - ✨ ARM64-compatible Garry's Mod setup.
-- ✅ Based on [steamcmd-arm64](https://hub.docker.com/r/sonroyaalmerol/steamcmd-arm64).
+- ✅ Based on (https://github.com/sonroyaalmerol/steamcmd-arm64).
 - 🎭 Based on Box64 emulator.
 - 🎈 Customizable environment overrides for Box64 settings.
 ---
