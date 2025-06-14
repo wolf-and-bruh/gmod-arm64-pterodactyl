@@ -2,10 +2,10 @@ name: Docker
 
 on:
   schedule:
-    - cron: '* 5 * * *'  # Run every day at 23:25 UTC
+    - cron: '0 * * * *'
   push:
     branches: [ "main" ]
-    tags: [ 'v*.*.*' ]      # Publish semver tags
+    tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ "main" ]
 
@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-      id-token: write  # Needed for Cosign signing
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -47,6 +47,10 @@ jobs:
         uses: docker/metadata-action@v5.0.0
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest
+            type=ref,event=branch
+            type=semver,pattern=v{{version}}
 
       - name: Build and push Docker image (ARM64)
         id: build-and-push
