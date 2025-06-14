@@ -1,8 +1,5 @@
 # Garry's Mod (ARM64) for Pterodactyl
-
-![image](https://github.com/user-attachments/assets/b4035da5-5a7a-42f8-b144-dddda289c756)
-
-
+![image](https://github.com/user-attachments/assets/a8b3ee6b-e375-4b29-baae-8bf02b8234d8)
 Pterodactyl Egg specialized for running **Garry's Mod on ARM64 architecture** (such as Raspberry Pi or ARM servers) and optimized for ARM64.
 
 ---
